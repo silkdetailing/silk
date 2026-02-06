@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silk Detailing | The Art of Automotive Preservation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FDFBF7;
+            --silk-blue: #89A5C6;
+            --deep-blue: #3E536B;
+            --stone: #1A1A1A;
+        }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--cream); 
+            color: var(--stone);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        /* Smooth Scroll Entrance Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Nav & Logo Styling */
+        .nav-logo-btn {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .nav-logo-btn:hover {
+            opacity: 0.8;
+            transform: translateY(-1px);
+        }
+
+        .brand-title {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        /* Hero Text Contrast */
+        .hero-pop {
+            text-shadow: 0 2px 15px rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-primary {
+            background-color: var(--silk-blue);
+            box-shadow: 0 10px 25px -5px rgba(137, 165, 198, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-primary:hover { 
+            background-color: var(--deep-blue); 
+            transform: translateY(-3px) scale(1.02); 
+        }
+
+        /* Payment Icons Styling */
+        .payment-pill {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Specialized Off-Road Card */
+        .offroad-card {
+            background: linear-gradient(145deg, #ffffff, #f0f4f8);
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center px-6 md:px-12 py-4 bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-stone-100">
+        <a href="#" class="nav-logo-btn">
+            <img src="input_file_0.png" alt="Silk Detailing Logo" class="w-10 h-10 object-contain">
+            <div class="brand-title text-stone-900">
+                Silk<span class="text-silk-blue font-normal italic lowercase ml-1">detailing</span>
+            </div>
+        </a>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.25em] font-bold text-stone-500">
+            <a href="#services" class="hover:text-silk-blue transition">Services</a>
+            <a href="#offroad" class="hover:text-silk-blue transition">Off-Road</a>
+            <a href="#contact" class="hover:text-silk-blue transition">Inquire</a>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="hidden lg:flex gap-2 opacity-40">
+                <i class="fa-brands fa-apple-pay text-2xl"></i>
+                <i class="fa-brands fa-cc-visa text-xl"></i>
+                <i class="fa-brands fa-cc-mastercard text-xl"></i>
+            </div>
+            <a href="#contact" class="btn-primary text-white px-7 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                Book Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[92vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=2070" 
+                 class="w-full h-full object-cover" alt="Luxury Car Detail">
+            <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/20 to-[#FDFBF7]"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl reveal">
+            <img src="input_file_0.png" class="w-20 h-20 mx-auto mb-8 drop-shadow-2xl animate-pulse" alt="Logo Accent">
+            <span class="text-deep-blue uppercase tracking-[0.5em] font-black text-[10px] mb-8 block">Mobile Excellence • Fully Self-Contained</span>
+            <h1 class="serif text-6xl md:text-8xl mb-8 text-slate-950 leading-[1.1] hero-pop font-bold">
+                The Art of <span class="italic text-silk-blue">Preservation.</span>
+            </h1>
+            <p class="text-slate-800 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed hero-pop">
+                Meticulous care for high-performance vehicles and rugged explorers alike. We bring the luxury studio to your location.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#services" class="btn-primary text-white px-12 py-5 rounded-full font-bold uppercase text-xs tracking-widest">
+                    Standard Packages
+                </a>
+                <a href="#offroad" class="bg-stone-900 text-white px-12 py-5 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-stone-800 transition shadow-xl">
+                    Off-Road Collection
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="py-24 bg-white relative z-10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="text-center group reveal">
+                <div class="w-16 h-16 bg-[#F3F6F9] rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-silk-blue transition-all duration-500">
+                    <i class="fa-solid fa-wand-sparkles text-silk-blue group-hover:text-white text-xl"></i>
+                </div>
+                <h3 class="serif text-2xl mb-4 italic">Bespoke Finish</h3>
+                <p class="text-sm text-stone-500 leading-relaxed px-4">Every vehicle is treated as a unique canvas, utilizing pH-neutral chemicals and scratch-free methods.</p>
+            </div>
+            <div class="text-center group reveal" style="transition-delay: 0.2s;">
+                <div class="w-16 h-16 bg-[#F3F6F9] rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-silk-blue transition-all duration-500">
+                    <i class="fa-solid fa-truck-pickup text-silk-blue group-hover:text-white text-xl"></i>
+                </div>
+                <h3 class="serif text-2xl mb-4 italic">Remote Capability</h3>
+                <p class="text-sm text-stone-500 leading-relaxed px-4">Our units carry 100 gallons of de-ionized water and silent power, servicing you anywhere from the office to the ranch.</p>
+            </div>
+            <div class="text-center group reveal" style="transition-delay: 0.4s;">
+                <div class="w-16 h-16 bg-[#F3F6F9] rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-silk-blue transition-all duration-500">
+                    <i class="fa-solid fa-shield-halved text-silk-blue group-hover:text-white text-xl"></i>
+                </div>
+                <h3 class="serif text-2xl mb-4 italic">Ultimate Armor</h3>
+                <p class="text-sm text-stone-500 leading-relaxed px-4">Authorized installers of multi-year ceramic coatings and graphene shields for lasting protection.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standard Services -->
+    <section id="services" class="py-32 px-6 bg-[#F9F7F2]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="serif text-5xl mb-4">The Studio Collection</h2>
+                <p class="text-stone-400 uppercase tracking-widest text-[10px] font-bold">Refinement for Luxury & Sports Vehicles</p>
+                <div class="h-1 w-20 bg-silk-blue mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Refresh -->
+                <div class="bg-white p-10 rounded-[30px] shadow-sm hover:shadow-xl transition-all reveal flex flex-col border border-stone-100">
+                    <div class="text-silk-blue text-[10px] font-black uppercase tracking-widest mb-4">Level 01</div>
+                    <h3 class="serif text-3xl mb-6 italic">Silk Refresh</h3>
+                    <ul class="text-stone-500 space-y-4 mb-12 text-sm flex-grow">
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue/50"></i> Dual-Bucket Safe Wash</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue/50"></i> Iron & Brake Dust Removal</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue/50"></i> Interior Deep Vacuum</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue/50"></i> Silica Sealant Finish</li>
+                    </ul>
+                    <div class="serif text-4xl mb-8 tracking-tighter">$185+</div>
+                    <a href="#contact" class="w-full text-center py-4 rounded-xl border-2 border-stone-100 font-bold hover:border-silk-blue transition uppercase text-[10px] tracking-[0.2em]">Inquire</a>
+                </div>
+
+                <!-- Signature -->
+                <div class="bg-white p-10 rounded-[30px] shadow-2xl reveal relative flex flex-col border-2 border-silk-blue lg:-translate-y-4 z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-silk-blue text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Recommended</div>
+                    <div class="text-silk-blue text-[10px] font-black uppercase tracking-widest mb-4">Level 02</div>
+                    <h3 class="serif text-3xl mb-6 italic">Silk Signature</h3>
+                    <ul class="text-stone-600 space-y-4 mb-12 text-sm font-medium flex-grow">
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue"></i> Full Paint Decontamination</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue"></i> Engine Bay Detail</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue"></i> Steam Sanitize Interior</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue"></i> 1-Year Graphene Coating</li>
+                    </ul>
+                    <div class="serif text-4xl mb-8 tracking-tighter">$395+</div>
+                    <a href="#contact" class="w-full text-center py-4 rounded-xl btn-primary text-white font-bold uppercase text-[10px] tracking-[0.2em]">Book Now</a>
+                </div>
+
+                <!-- Shield -->
+                <div class="bg-white p-10 rounded-[30px] shadow-sm hover:shadow-xl transition-all reveal flex flex-col border border-stone-100">
+                    <div class="text-silk-blue text-[10px] font-black uppercase tracking-widest mb-4">Level 03</div>
+                    <h3 class="serif text-3xl mb-6 italic">Silk Shield</h3>
+                    <ul class="text-stone-500 space-y-4 mb-12 text-sm flex-grow">
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue/50"></i> Machine Gloss Enhancement</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue/50"></i> 3-Year Ceramic Armor</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue/50"></i> Glass & Wheel Coating</li>
+                        <li><i class="fa-solid fa-circle-check mr-2 text-silk-blue/50"></i> Leather Preservation</li>
+                    </ul>
+                    <div class="serif text-4xl mb-8 tracking-tighter">$850+</div>
+                    <a href="#contact" class="w-full text-center py-4 rounded-xl border-2 border-stone-100 font-bold hover:border-silk-blue transition uppercase text-[10px] tracking-[0.2em]">Inquire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Off-Road Specialized Section -->
+    <section id="offroad" class="py-32 px-6 bg-stone-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="input_file_0.png" class="w-12 h-12 grayscale brightness-200 opacity-50" alt="Icon">
+                        <h2 class="serif text-5xl">The <span class="italic text-silk-blue">Rugged</span> Series</h2>
+                    </div>
+                    <p class="text-stone-400 mb-8 leading-relaxed max-w-lg">
+                        Jeeps and off-road vehicles require a specialized approach. We tackle deep-seated mud, wheel-well rejuvenation, and undercarriage flushing that standard detailing misses. Due to the high labor intensity, these packages are our most comprehensive offerings.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 mb-10">
+                        <div>
+                            <h4 class="text-silk-blue font-bold text-xs uppercase tracking-widest mb-2">Extended Time</h4>
+                            <p class="text-xs text-stone-500 italic">Approx. 6-8 Hours labor per vehicle.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-silk-blue font-bold text-xs uppercase tracking-widest mb-2">Special Tools</h4>
+                            <p class="text-xs text-stone-500 italic">Steam extraction & under-flush tech.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 grid md:grid-cols-1 gap-6 w-full">
+                    <!-- Package: The Overlander -->
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-[30px] hover:bg-white/10 transition reveal flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-center md:text-left">
+                            <h3 class="serif text-2xl italic mb-2">The Overlander</h3>
+                            <p class="text-xs text-stone-400 mb-4">Deep exterior/interior decontamination for muddy explorers.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-silk-blue/20 text-silk-blue text-[9px] rounded-full font-bold uppercase">Mud Removal</span>
+                                <span class="px-3 py-1 bg-silk-blue/20 text-silk-blue text-[9px] rounded-full font-bold uppercase">Undercarriage</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="serif text-3xl mb-3">$550+</div>
+                            <button class="bg-white text-stone-900 px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-silk-blue hover:text-white transition">Select</button>
+                        </div>
+                    </div>
+
+                    <!-- Package: Terrain Shield -->
+                    <div class="bg-white/5 border border-white/20 p-8 rounded-[30px] hover:bg-white/10 transition reveal flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-center md:text-left">
+                            <h3 class="serif text-2xl italic mb-2 text-silk-blue">The Terrain Shield</h3>
+                            <p class="text-xs text-stone-400 mb-4">Ultimate protection with trim restoration and heavy-duty graphene.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-silk-blue/20 text-silk-blue text-[9px] rounded-full font-bold uppercase">Trim Restore</span>
+                                <span class="px-3 py-1 bg-silk-blue/20 text-silk-blue text-[9px] rounded-full font-bold uppercase">Graphene Max</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="serif text-3xl mb-3">$1,150+</div>
+                            <button class="bg-silk-blue text-white px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-stone-900 transition">Select</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Section -->
+    <section id="contact" class="py-32 bg-[#F9F7F2] px-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-[40px] shadow-2xl p-10 md:p-16 reveal">
+            <div class="text-center mb-12">
+                <img src="input_file_0.png" class="w-16 h-16 mx-auto mb-6" alt="Form Logo">
+                <h2 class="serif text-4xl mb-4 italic">Begin the Restoration</h2>
+                <p class="text-stone-400 text-sm">Tell us about your vehicle and we'll craft a bespoke quote.</p>
+            </div>
+            
+            <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Your Name" class="w-full bg-[#FDFBF7] border-stone-100 p-5 rounded-2xl text-sm focus:ring-2 focus:ring-silk-blue transition outline-none">
+                    <input type="email" placeholder="Email Address" class="w-full bg-[#FDFBF7] border-stone-100 p-5 rounded-2xl text-sm focus:ring-2 focus:ring-silk-blue transition outline-none">
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Vehicle Make/Model (e.g. Jeep Wrangler)" class="w-full bg-[#FDFBF7] border-stone-100 p-5 rounded-2xl text-sm focus:ring-2 focus:ring-silk-blue transition outline-none">
+                    <select class="w-full bg-[#FDFBF7] border-stone-100 p-5 rounded-2xl text-sm focus:ring-2 focus:ring-silk-blue transition outline-none text-stone-400">
+                        <option>Desired Package</option>
+                        <option>Silk Refresh</option>
+                        <option>Silk Signature</option>
+                        <option>Silk Shield (Ceramic)</option>
+                        <option>The Overlander (Off-Road)</option>
+                        <option>The Terrain Shield (Off-Road)</option>
+                    </select>
+                </div>
+                <textarea rows="4" placeholder="Any specific concerns? (Pet hair, mud, heavy swirls...)" class="w-full bg-[#FDFBF7] border-stone-100 p-5 rounded-2xl text-sm focus:ring-2 focus:ring-silk-blue transition outline-none"></textarea>
+                
+                <div class="flex flex-col items-center gap-6 pt-4">
+                    <button class="btn-primary w-full py-5 rounded-2xl font-bold uppercase text-xs tracking-[0.3em] text-white">Send Inquiry</button>
+                    <div class="flex items-center gap-4 text-stone-300">
+                        <i class="fa-brands fa-apple-pay text-3xl"></i>
+                        <i class="fa-brands fa-cc-visa text-2xl"></i>
+                        <i class="fa-brands fa-cc-mastercard text-2xl"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest ml-2">Secure Payments Accepted</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+                <div class="max-w-xs">
+                    <a href="#" class="nav-logo-btn mb-6">
+                        <img src="input_file_0.png" alt="Logo" class="w-12 h-12 grayscale brightness-200">
+                        <div class="brand-title text-white">Silk<span class="text-silk-blue">detailing</span></div>
+                    </a>
+                    <p class="text-stone-500 text-sm italic">Preserving the integrity of your most valuable assets with unparalleled craftsmanship.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-16">
+                    <div>
+                        <h4 class="text-[10px] uppercase tracking-widest font-black text-silk-blue mb-6">Explore</h4>
+                        <ul class="text-sm space-y-3 text-stone-400">
+                            <li><a href="#services" class="hover:text-white transition">Luxury Packages</a></li>
+                            <li><a href="#offroad" class="hover:text-white transition">Off-Road Specialist</a></li>
+                            <li><a href="#contact" class="hover:text-white transition">Book Mobile Unit</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] uppercase tracking-widest font-black text-silk-blue mb-6">Payment</h4>
+                        <div class="space-y-3">
+                            <div class="payment-pill"><i class="fa-brands fa-apple-pay"></i> Apple Pay</div>
+                            <div class="payment-pill"><i class="fa-solid fa-credit-card"></i> Card / Contactless</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[9px] text-stone-600 uppercase tracking-widest">© 2024 SILK DETAILING • THE ART OF PRESERVATION • LICENSED & INSURED</p>
+                <div class="flex gap-6 text-stone-500 text-lg">
+                    <a href="#" class="hover:text-silk-blue transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-silk-blue transition"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Scroll Reveal Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Run once on load
+        window.onload = reveal;
+    </script>
+</body>
+</html>
